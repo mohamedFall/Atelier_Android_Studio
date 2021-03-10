@@ -1,6 +1,5 @@
 package fr.epsi.atelierandroidstudio_prj1;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,7 +16,7 @@ public class Categories extends ProjectActivity {
     ArrayList<Category> categoriesList;
     CategoryAdapter categoryAdapter;
     RecyclerView recyclerView;
-    String products_url = "https://djemam.com/epsi/categories.json";
+    String categories_url = "https://djemam.com/epsi/categories.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,7 @@ public class Categories extends ProjectActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(categoryAdapter);
 
-        WebServiceCall wsCall= new WebServiceCall(products_url, new WebServiceCall.Callback() {
+        WebServiceCall wsCall= new WebServiceCall(categories_url, new WebServiceCall.Callback() {
             @Override
             public void onComplete(String result) {
                 try {
