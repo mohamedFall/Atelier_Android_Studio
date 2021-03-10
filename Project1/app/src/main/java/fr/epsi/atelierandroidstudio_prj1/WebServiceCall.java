@@ -14,6 +14,7 @@ import java.util.concurrent.Executors;
 import javax.net.ssl.HttpsURLConnection;
 
 public class WebServiceCall {
+
     public interface Callback {
         void onComplete(String result);
         void onError(Exception e);
@@ -25,8 +26,8 @@ public class WebServiceCall {
     private String wsUrl;
 
     public WebServiceCall(String wsUrl, Callback callback){
-        this.wsUrl=wsUrl;
-        this.callback=callback;
+        this.wsUrl = wsUrl;
+        this.callback = callback;
     }
 
     public void run() {
