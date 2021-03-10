@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Atelier Android Studio - Prj 1</string>
+    <string name="epsi_url">https://www.epsi.fr/</string>
 </resources>
